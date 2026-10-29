@@ -9,7 +9,13 @@ app.get("/", (req, res) => {
 
 app.get("/health", (req, res) => {
   res.json({
-    status: "funcionando",
+    status: 'OK',
+  });
+});
+
+app.get('/api/saludo', (req, res) => {
+  res.json({
+    message: 'Hola desde el pipeline de CI/CD',
   });
 });
 
